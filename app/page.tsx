@@ -138,7 +138,7 @@ export default function HomePage() {
                   {area.excerpt}
                 </p>
                 <span className="mt-4 flex items-center gap-1.5 text-gold-dark text-xs font-semibold group-hover:gap-3 transition-all">
-                  Learn more <ArrowRightIcon />
+                  View details <ArrowRightIcon />
                 </span>
               </Link>
             ))}
