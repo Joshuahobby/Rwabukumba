@@ -22,7 +22,7 @@ export default function PageHeader({ title, subtitle, breadcrumb }: PageHeaderPr
             {breadcrumb}
           </p>
         )}
-        <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white font-bold leading-tight max-w-3xl">
+        <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white font-bold leading-tight max-w-3xl text-balance">
           {title}
         </h1>
         {subtitle && (
