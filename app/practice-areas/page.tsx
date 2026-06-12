@@ -27,7 +27,7 @@ export default function PracticeAreasPage() {
               <Link
                 key={area.slug}
                 href={`/practice-areas/${area.slug}`}
-                className="group bg-white border border-gray-100 rounded-lg p-7 hover:border-gold/40 hover:shadow-md transition-all flex flex-col"
+                className="group bg-white border border-gray-100 rounded-lg p-7 hover:border-gold/40 hover:shadow-md transition flex flex-col"
               >
                 <div className="w-12 h-12 rounded-lg bg-navy/5 group-hover:bg-navy flex items-center justify-center mb-5 transition-colors">
                   <PracticeIcon
@@ -41,8 +41,8 @@ export default function PracticeAreasPage() {
                 <p className="text-slate-body text-sm leading-relaxed flex-1">
                   {area.excerpt}
                 </p>
-                <span className="mt-5 flex items-center gap-1.5 text-gold-dark text-xs font-semibold group-hover:gap-3 transition-all">
-                  View details <ArrowRightIcon />
+                <span className="mt-5 flex items-center gap-1.5 text-gold-dark text-xs font-semibold">
+                  View details <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
             ))}
