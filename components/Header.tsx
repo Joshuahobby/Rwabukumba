@@ -21,12 +21,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-navy shadow-md">
       {/* Top contact strip */}
       <div className="bg-navy-dark border-b border-navy-light/30 hidden md:block">
-        <div className="max-w-site mx-auto px-6 py-1.5 flex justify-end items-center gap-6 text-xs text-white/70">
-          <a href="tel:+250788673699" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+        <div className="max-w-site mx-auto px-6 flex justify-end items-center gap-6 text-xs text-white/70">
+          <a href="tel:+250788673699" className="flex items-center gap-1.5 py-2 hover:text-gold transition-colors">
             <PhoneIcon className="w-3.5 h-3.5" />
             +250 788 673 699
           </a>
-          <a href="mailto:moussa@rwabukumbalaw.rw" className="hover:text-gold transition-colors">
+          <a href="mailto:moussa@rwabukumbalaw.rw" className="inline-block py-2 hover:text-gold transition-colors">
             moussa@rwabukumbalaw.rw
           </a>
         </div>

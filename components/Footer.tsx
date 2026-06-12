@@ -38,12 +38,12 @@ export default function Footer() {
           <h2 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
             Practice Areas
           </h2>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-0.5">
             {practiceLinks.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-white/60 hover:text-gold transition-colors"
+                  className="inline-block py-1.5 text-sm text-white/60 hover:text-gold transition-colors"
                 >
                   {label}
                 </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
           <h2 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
             Quick Links
           </h2>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-0.5">
             {[
               { href: "/about", label: "About Me" },
               { href: "/notary", label: "Notary Services" },
@@ -67,7 +67,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-white/60 hover:text-gold transition-colors"
+                  className="inline-block py-1.5 text-sm text-white/60 hover:text-gold transition-colors"
                 >
                   {label}
                 </Link>
@@ -81,11 +81,11 @@ export default function Footer() {
           <h2 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
             Contact
           </h2>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-1">
             <li>
               <a
                 href="tel:+250788673699"
-                className="flex items-start gap-3 text-sm text-white/60 hover:text-gold transition-colors group"
+                className="flex items-start gap-3 py-1.5 text-sm text-white/60 hover:text-gold transition-colors group"
               >
                 <PhoneIcon className="w-4 h-4 mt-0.5 text-gold/60 group-hover:text-gold shrink-0" />
                 +250 788 673 699
@@ -94,7 +94,7 @@ export default function Footer() {
             <li>
               <a
                 href="mailto:moussa@rwabukumbalaw.rw"
-                className="flex items-start gap-3 text-sm text-white/60 hover:text-gold transition-colors group"
+                className="flex items-start gap-3 py-1.5 text-sm text-white/60 hover:text-gold transition-colors group"
               >
                 <EmailIcon className="w-4 h-4 mt-0.5 text-gold/60 group-hover:text-gold shrink-0" />
                 moussa@rwabukumbalaw.rw

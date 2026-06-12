@@ -73,7 +73,7 @@ export default function ContactPage() {
                       {href ? (
                         <a
                           href={href}
-                          className="text-navy font-medium hover:text-gold-dark transition-colors text-sm"
+                          className="inline-block py-1 text-navy font-medium hover:text-gold-dark transition-colors text-sm"
                         >
                           {value}
                         </a>

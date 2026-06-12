@@ -103,12 +103,12 @@ export default function PracticeAreaPage({ params }: Props) {
               <h4 className="font-serif text-base text-navy font-semibold mb-4">
                 Related Practice Areas
               </h4>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-0.5">
                 {related.map((a) => (
                   <li key={a.slug}>
                     <Link
                       href={`/practice-areas/${a.slug}`}
-                      className="flex items-center justify-between gap-2 text-sm text-slate-body hover:text-navy group transition-colors"
+                      className="flex items-center justify-between gap-2 py-1.5 text-sm text-slate-body hover:text-navy group transition-colors"
                     >
                       <span>{a.shortTitle}</span>
                       <ArrowRightIcon className="w-3.5 h-3.5 text-gold/50 group-hover:text-gold transition-colors" />
@@ -118,7 +118,7 @@ export default function PracticeAreaPage({ params }: Props) {
               </ul>
               <Link
                 href="/practice-areas"
-                className="block mt-4 text-xs text-gold-dark font-semibold hover:underline"
+                className="block mt-3 py-2 text-xs text-gold-dark font-semibold hover:underline"
               >
                 All Practice Areas →
               </Link>
