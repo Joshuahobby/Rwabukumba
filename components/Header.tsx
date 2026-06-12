@@ -11,7 +11,6 @@ const navLinks = [
   { href: "/practice-areas", label: "Practice Areas" },
   { href: "/notary", label: "Notary Services" },
   { href: "/clients-cases", label: "Clients & Cases" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
