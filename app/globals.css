@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Visible focus indicator on both light and dark sections:
+     white inner ring + navy outer ring (inputs keep their own focus:ring) */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #1b2a4a;
+    border-radius: 2px;
   }
 
   body {

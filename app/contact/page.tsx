@@ -51,7 +51,7 @@ export default function ContactPage() {
           {/* Contact info */}
           <aside className="flex flex-col gap-8">
             <div>
-              <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Contact Details</p>
+              <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Contact Details</p>
               <h2 className="font-serif text-2xl text-navy font-bold mb-6">
                 Me RWABUKUMBA Moussa
               </h2>
@@ -73,7 +73,7 @@ export default function ContactPage() {
                       {href ? (
                         <a
                           href={href}
-                          className="text-navy font-medium hover:text-gold transition-colors text-sm"
+                          className="text-navy font-medium hover:text-gold-dark transition-colors text-sm"
                         >
                           {value}
                         </a>
@@ -112,7 +112,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className="lg:col-span-2">
-            <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Send a message</p>
+            <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Send a message</p>
             <h2 className="font-serif text-2xl text-navy font-bold mb-2">
               Describe your matter
             </h2>

@@ -18,7 +18,7 @@ export default function PageHeader({ title, subtitle, breadcrumb }: PageHeaderPr
       />
       <div className="relative max-w-site mx-auto px-6">
         {breadcrumb && (
-          <p className="text-gold/70 text-xs font-sans tracking-widest uppercase mb-3">
+          <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">
             {breadcrumb}
           </p>
         )}

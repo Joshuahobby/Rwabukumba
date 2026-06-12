@@ -78,7 +78,7 @@ export default function AboutPage() {
 
           {/* Text */}
           <div className="lg:col-span-2">
-            <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Biography</p>
+            <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Biography</p>
             <h2 className="font-serif text-3xl text-navy font-bold mb-6">
               12+ years of commercial legal practice in Rwanda
             </h2>
@@ -118,7 +118,7 @@ export default function AboutPage() {
       {/* Practice highlights */}
       <section className="py-20 bg-offwhite">
         <div className="max-w-site mx-auto px-6">
-          <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Practice</p>
+          <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Practice</p>
           <h2 className="font-serif text-3xl text-navy font-bold mb-10">
             Areas of expertise
           </h2>

@@ -39,7 +39,7 @@ export default function Header() {
           <span className="text-white font-serif text-lg font-bold tracking-wide group-hover:text-gold transition-colors">
             Me RWABUKUMBA Moussa
           </span>
-          <span className="text-gold/80 text-xs font-sans tracking-widest uppercase">
+          <span className="text-gold text-xs font-sans tracking-widest uppercase">
             Attorney · Notary · Kigali
           </span>
         </Link>
@@ -79,6 +79,8 @@ export default function Header() {
           className="lg:hidden text-white hover:text-gold transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           {mobileOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
@@ -86,7 +88,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-navy-dark border-t border-navy-light/30 px-6 pb-6">
+        <div id="mobile-menu" className="lg:hidden bg-navy-dark border-t border-navy-light/30 px-6 pb-6">
           <ul className="flex flex-col gap-1 pt-4">
             {navLinks.map(({ href, label }) => {
               const isActive =

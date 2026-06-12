@@ -50,8 +50,8 @@ export default function ContactForm() {
 
   if (state === "success") {
     return (
-      <div className="bg-gold/10 border border-gold/30 rounded-lg p-10 text-center">
-        <div className="text-gold text-4xl mb-4">✓</div>
+      <div role="status" className="bg-gold/10 border border-gold/30 rounded-lg p-10 text-center">
+        <div aria-hidden="true" className="text-gold-dark text-4xl mb-4">✓</div>
         <h3 className="font-serif text-xl text-navy font-bold mb-2">
           Message received
         </h3>

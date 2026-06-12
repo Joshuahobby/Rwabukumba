@@ -65,7 +65,7 @@ export default function NotaryPage() {
       <section className="py-20 bg-white">
         <div className="max-w-site mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-14">
           <div className="lg:col-span-2">
-            <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Overview</p>
+            <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Overview</p>
             <h2 className="font-serif text-3xl text-navy font-bold mb-6">
               Authorised notary under Rwandan law
             </h2>
@@ -102,7 +102,7 @@ export default function NotaryPage() {
       {/* Services */}
       <section className="py-20 bg-offwhite">
         <div className="max-w-site mx-auto px-6">
-          <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Services</p>
+          <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Services</p>
           <h2 className="font-serif text-3xl text-navy font-bold mb-10">
             Notarial services offered
           </h2>
@@ -130,7 +130,7 @@ export default function NotaryPage() {
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="max-w-site mx-auto px-6 max-w-3xl">
-          <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">FAQ</p>
+          <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">FAQ</p>
           <h2 className="font-serif text-3xl text-navy font-bold mb-10">
             Common questions about notary services
           </h2>

@@ -47,7 +47,7 @@ export default function PracticeAreaPage({ params }: Props) {
                 <PracticeIcon iconKey={area.iconKey} className="w-6 h-6 text-gold" />
               </div>
               <div>
-                <p className="text-gold text-xs font-sans tracking-widest uppercase">Practice Area</p>
+                <p className="text-gold-dark text-xs font-sans tracking-widest uppercase">Practice Area</p>
                 <h2 className="font-serif text-2xl text-navy font-bold">{area.shortTitle}</h2>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function PracticeAreaPage({ params }: Props) {
               </ul>
               <Link
                 href="/practice-areas"
-                className="block mt-4 text-xs text-gold font-semibold hover:underline"
+                className="block mt-4 text-xs text-gold-dark font-semibold hover:underline"
               >
                 All Practice Areas →
               </Link>

@@ -67,7 +67,7 @@ export default function ClientsCasesPage() {
       {/* Clients */}
       <section className="py-20 bg-white">
         <div className="max-w-site mx-auto px-6">
-          <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Who we serve</p>
+          <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Who we serve</p>
           <h2 className="font-serif text-3xl text-navy font-bold mb-10">
             Clients
           </h2>
@@ -112,7 +112,7 @@ export default function ClientsCasesPage() {
       {/* Confidentiality note */}
       <section className="py-16 bg-gold/5 border-y border-gold/20">
         <div className="max-w-site mx-auto px-6 max-w-2xl text-center">
-          <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">Confidentiality</p>
+          <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">Confidentiality</p>
           <h2 className="font-serif text-2xl text-navy font-bold mb-4">
             Client confidentiality is paramount
           </h2>

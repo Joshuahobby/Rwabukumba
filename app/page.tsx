@@ -87,7 +87,7 @@ export default function HomePage() {
       <section className="py-20 md:py-28 bg-offwhite">
         <div className="max-w-site mx-auto px-6">
           <div className="mb-12">
-            <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">
+            <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">
               Areas of Practice
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-navy font-bold">
@@ -117,7 +117,7 @@ export default function HomePage() {
                 <p className="text-slate-body text-sm leading-relaxed line-clamp-3">
                   {area.excerpt}
                 </p>
-                <span className="mt-4 flex items-center gap-1.5 text-gold text-xs font-semibold group-hover:gap-3 transition-all">
+                <span className="mt-4 flex items-center gap-1.5 text-gold-dark text-xs font-semibold group-hover:gap-3 transition-all">
                   Learn more <ArrowRightIcon />
                 </span>
               </Link>
@@ -140,7 +140,7 @@ export default function HomePage() {
         <div className="max-w-site mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* Text */}
           <div>
-            <p className="text-gold text-xs font-sans tracking-widest uppercase mb-3">
+            <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-3">
               About Me
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-navy font-bold mb-6">
@@ -190,7 +190,7 @@ export default function HomePage() {
       <section className="py-16 bg-gold/5 border-y border-gold/20">
         <div className="max-w-site mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-gold text-xs font-sans tracking-widest uppercase mb-2">
+            <p className="text-gold-dark text-xs font-sans tracking-widest uppercase mb-2">
               Notary Services
             </p>
             <h3 className="font-serif text-2xl text-navy font-bold">

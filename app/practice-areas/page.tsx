@@ -41,7 +41,7 @@ export default function PracticeAreasPage() {
                 <p className="text-slate-body text-sm leading-relaxed flex-1">
                   {area.excerpt}
                 </p>
-                <span className="mt-5 flex items-center gap-1.5 text-gold text-xs font-semibold group-hover:gap-3 transition-all">
+                <span className="mt-5 flex items-center gap-1.5 text-gold-dark text-xs font-semibold group-hover:gap-3 transition-all">
                   View details <ArrowRightIcon />
                 </span>
               </Link>

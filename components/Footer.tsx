@@ -21,23 +21,23 @@ export default function Footer() {
             <span className="text-white font-serif text-lg font-bold group-hover:text-gold transition-colors">
               Me RWABUKUMBA Moussa
             </span>
-            <span className="text-gold/70 text-xs tracking-widest uppercase font-sans mt-0.5">
+            <span className="text-gold text-xs tracking-widest uppercase font-sans mt-0.5">
               Attorney · Notary · Kigali
             </span>
           </Link>
           <p className="text-sm leading-relaxed text-white/60 mt-4">
             Commercial litigator, corporate adviser and notary serving businesses, banks and investors in Kigali, Rwanda.
           </p>
-          <p className="text-xs text-white/40 mt-4">
+          <p className="text-xs text-white/60 mt-4">
             Practising in English, French and Kinyarwanda.
           </p>
         </div>
 
         {/* Practice Areas */}
         <div>
-          <h4 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
+          <h2 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
             Practice Areas
-          </h4>
+          </h2>
           <ul className="flex flex-col gap-2.5">
             {practiceLinks.map(({ href, label }) => (
               <li key={href}>
@@ -54,9 +54,9 @@ export default function Footer() {
 
         {/* Quick links */}
         <div>
-          <h4 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
+          <h2 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
             Quick Links
-          </h4>
+          </h2>
           <ul className="flex flex-col gap-2.5">
             {[
               { href: "/about", label: "About Me" },
@@ -78,9 +78,9 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
+          <h2 className="text-white font-serif text-sm font-semibold mb-5 uppercase tracking-wider">
             Contact
-          </h4>
+          </h2>
           <ul className="flex flex-col gap-4">
             <li>
               <a
@@ -112,7 +112,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-site mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+        <div className="max-w-site mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>
             © {new Date().getFullYear()} Me RWABUKUMBA Moussa. All rights reserved.
           </p>

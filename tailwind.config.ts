@@ -18,10 +18,13 @@ const config: Config = {
           DEFAULT: "#C09A3A",
           light: "#D4B050",
           pale: "#F5EDD6",
+          // For text on white/offwhite — DEFAULT gold is only 2.7:1 there
+          dark: "#8C6D1F",
         },
         slate: {
           body: "#4A5568",
-          muted: "#718096",
+          // 4.76:1 on white (WCAG AA); previous #718096 was 4.0:1
+          muted: "#64748B",
         },
         offwhite: "#F7F8FA",
       },
