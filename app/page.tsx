@@ -45,7 +45,7 @@ export default function HomePage() {
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold" />
 
         <div className="relative max-w-site mx-auto px-6 py-24 md:py-32 lg:py-28 grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,400px)] gap-16 items-center">
-          <div>
+          <div className="animate-fade-up">
             <p className="text-gold text-xs font-sans tracking-widest uppercase mb-4">
               Africa International Law Firm · Kigali, Rwanda
             </p>
@@ -72,7 +72,7 @@ export default function HomePage() {
           </div>
 
           {/* Portrait — desktop only; hero stays compact on mobile */}
-          <div className="relative hidden lg:block">
+          <div className="relative hidden lg:block animate-fade-up-delayed">
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-white/10 shadow-2xl">
               <Image
                 src="/moussa.jpg"
