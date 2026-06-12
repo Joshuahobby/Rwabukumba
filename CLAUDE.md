@@ -23,7 +23,7 @@ Professional website for **Me RWABUKUMBA Moussa**, commercial litigator and nota
 | Fonts | Playfair Display (headings) + Inter (body) via `next/font/google` |
 | Language | TypeScript |
 | Deployment | Vercel (auto-deploy from main branch) |
-| Email (TODO) | Resend via Next.js API route |
+| Email | Resend via `app/api/contact/route.ts` ✅ |
 
 ---
 
@@ -40,7 +40,8 @@ app/
     [slug]/page.tsx       # Individual practice area (dynamic, static params)
   notary/page.tsx         # Notary Services
   clients-cases/page.tsx  # Clients & Cases
-  contact/page.tsx        # Contact page
+  contact/page.tsx        # Contact page (form + Google Maps embed)
+  api/contact/route.ts    # Contact form backend — validates + sends via Resend
   sitemap.ts              # Auto-generated sitemap
   robots.ts               # robots.txt
 
@@ -49,7 +50,7 @@ components/
   Footer.tsx              # 4-col footer with links + contact
   PageHeader.tsx          # Reusable dark page header section
   ContactCTA.tsx          # Reusable CTA strip (used on every page)
-  ContactForm.tsx         # Contact form — client component (currently uses mock submit)
+  ContactForm.tsx         # Contact form — client component, POSTs to /api/contact
   Icons.tsx               # All SVG icons inline (no external icon lib)
 
 lib/
@@ -107,80 +108,28 @@ Firm:   Africa International Law Firm
 - [x] `sitemap.ts` + `robots.ts`
 - [x] Phone number updated: +250 788 673 699
 - [x] Professional photo wired up (`/moussa.jpg`) — file must be copied to `public/`
+- [x] Contact form backend — `app/api/contact/route.ts` sends via Resend (validation, HTML escaping, reply-to set to enquirer). Env vars: `RESEND_API_KEY` (required), `CONTACT_EMAIL`, `CONTACT_FROM_EMAIL` — see `.env.example`
+- [x] ContactForm POSTs to `/api/contact` with error state + message
+- [x] Google Maps embed on `/contact` (keyless `?q=...&output=embed` URL, no API key)
+- [x] Pushed to GitHub `main`; Next.js upgraded to 14.2.35 (security patch)
+- [x] README.md + docs/DEPLOYMENT.md + docs/CONTENT_GUIDE.md
 
 ---
 
 ## What Still Needs Doing ⬜
 
-### 1. Contact form backend (Priority: High)
-The form currently simulates a submit with a timeout. Wire up a real email sender:
+### 1. Deploy to Vercel + connect domain (Priority: High)
+vercel.com/new → import Joshuahobby/Rwabukumba → add env vars (`RESEND_API_KEY`, `CONTACT_EMAIL`, `CONTACT_FROM_EMAIL`) → Deploy.
+Then Settings → Domains → add `rwabukumbalaw.rw`. Full guide: `docs/DEPLOYMENT.md`.
 
-```bash
-npm install resend
-```
+### 2. Verify sending domain in Resend (Priority: High)
+Until `rwabukumbalaw.rw` is verified in Resend, the form sends from `onboarding@resend.dev`, which only delivers to the Resend account owner's email. See `docs/DEPLOYMENT.md` §1.2.
 
-Create `app/api/contact/route.ts`:
-```typescript
-import { Resend } from 'resend';
-import { NextResponse } from 'next/server';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export async function POST(req: Request) {
-  const { name, company, email, phone, message } = await req.json();
-  await resend.emails.send({
-    from: 'website@rwabukumbalaw.rw',
-    to: 'moussa@rwabukumbalaw.rw',
-    subject: `New enquiry from ${name}${company ? ` (${company})` : ''}`,
-    html: `<p><b>Name:</b> ${name}</p><p><b>Company:</b> ${company}</p><p><b>Email:</b> ${email}</p><p><b>Phone:</b> ${phone}</p><p><b>Message:</b><br>${message}</p>`,
-  });
-  return NextResponse.json({ ok: true });
-}
-```
-
-Update `components/ContactForm.tsx` to POST to `/api/contact` instead of the mock timeout.
-
-Add to `.env.local`:
-```
-RESEND_API_KEY=re_xxxxxxxxxxxx
-```
-
-### 2. Google Maps embed (Priority: Medium)
-In `app/contact/page.tsx`, replace the placeholder div with a real iframe:
-```tsx
-<iframe
-  src="https://www.google.com/maps/embed?pb=..."
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
-```
-Get the embed URL from Google Maps → Share → Embed a map.
-
-### 3. Add photo to public/ (Priority: High)
-Save the professional headshot to:
-```
-public/moussa.jpg
-```
-Photo is a portrait on a light gray background — used on Home page (About section) and About page.
-
-### 4. Confirm real email address (Priority: High)
+### 3. Confirm real email address (Priority: High)
 Current placeholder: `moussa@rwabukumbalaw.rw`
-Update in: `components/Header.tsx`, `components/Footer.tsx`, `app/contact/page.tsx`
+Update in: `components/Header.tsx`, `components/Footer.tsx`, `app/contact/page.tsx`, `app/api/contact/route.ts` (CONTACT_EMAIL default), `.env.example`
 
-### 5. Deploy to Vercel (Priority: High)
-```bash
-git add .
-git commit -m "Initial build"
-git push origin main
-```
-Then: vercel.com/new → import Joshuahobby/Rwabukumba → Deploy.
-Add `RESEND_API_KEY` in Vercel Environment Variables.
-
-### 6. French version (Priority: Low — Phase 2)
+### 4. French version (Priority: Low — Phase 2)
 Install `next-intl`, create `messages/en.json` and `messages/fr.json`, wrap routes in `[locale]`.
 
 ---
