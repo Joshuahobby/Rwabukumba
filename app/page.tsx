@@ -44,29 +44,49 @@ export default function HomePage() {
         {/* Gold accent bar */}
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold" />
 
-        <div className="relative max-w-site mx-auto px-6 py-24 md:py-32 lg:py-40">
-          <p className="text-gold text-xs font-sans tracking-widest uppercase mb-4">
-            Africa International Law Firm · Kigali, Rwanda
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight max-w-3xl text-balance">
-            Trusted Commercial Litigator in Kigali
-          </h1>
-          <p className="mt-6 text-white/70 text-lg md:text-xl max-w-2xl leading-relaxed font-sans">
-            Over 12 years representing businesses, banks and investors before Rwandan courts. Commercial litigation, corporate advisory and full notary services under Rwandan law.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 rounded text-sm transition-colors text-center"
-            >
-              Discuss Your Case
-            </Link>
-            <Link
-              href="/practice-areas"
-              className="border border-white/30 hover:border-gold text-white hover:text-gold font-semibold px-8 py-4 rounded text-sm transition-colors text-center"
-            >
-              Practice Areas
-            </Link>
+        <div className="relative max-w-site mx-auto px-6 py-24 md:py-32 lg:py-28 grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,400px)] gap-16 items-center">
+          <div>
+            <p className="text-gold text-xs font-sans tracking-widest uppercase mb-4">
+              Africa International Law Firm · Kigali, Rwanda
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight max-w-3xl text-balance">
+              Trusted Commercial Litigator in Kigali
+            </h1>
+            <p className="mt-6 text-white/70 text-lg md:text-xl max-w-2xl leading-relaxed font-sans">
+              Over 12 years representing businesses, banks and investors before Rwandan courts. Commercial litigation, corporate advisory and full notary services under Rwandan law.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 rounded text-sm transition-colors text-center"
+              >
+                Discuss Your Case
+              </Link>
+              <Link
+                href="/practice-areas"
+                className="border border-white/30 hover:border-gold text-white hover:text-gold font-semibold px-8 py-4 rounded text-sm transition-colors text-center"
+              >
+                Practice Areas
+              </Link>
+            </div>
+          </div>
+
+          {/* Portrait — desktop only; hero stays compact on mobile */}
+          <div className="relative hidden lg:block">
+            <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/moussa.jpg"
+                alt="Me RWABUKUMBA Moussa, attorney and notary in Kigali"
+                fill
+                priority
+                sizes="400px"
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent" />
+            </div>
+            {/* Gold accents */}
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gold/20 rounded-lg -z-10" />
+            <div className="absolute -top-4 -right-4 w-16 h-16 border-2 border-gold/40 rounded-lg" />
           </div>
         </div>
       </section>
