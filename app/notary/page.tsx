@@ -78,7 +78,7 @@ export default function NotaryPage() {
           </div>
           <aside>
             <div className="bg-navy rounded-lg p-6 text-white">
-              <h4 className="font-serif text-lg font-bold mb-2">Request notary services</h4>
+              <h3 className="font-serif text-lg font-bold mb-2">Request notary services</h3>
               <p className="text-white/70 text-sm mb-5 leading-relaxed">
                 Contact us to discuss your notarial requirements and arrange an appointment.
               </p>
